@@ -14,6 +14,9 @@
 		8271F3301C12C8F700558BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8271F32E1C12C8F700558BC6 /* LaunchScreen.storyboard */; };
 		8271F33B1C12C8F700558BC6 /* BumperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8271F33A1C12C8F700558BC6 /* BumperTests.swift */; };
 		8271F3461C12C8F700558BC6 /* BumperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8271F3451C12C8F700558BC6 /* BumperUITests.swift */; };
+		827AA9E71C1402CB00E2C0FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827AA9E61C1402CB00E2C0FB /* LoginViewController.swift */; };
+		8283277F1C13F5F300BAA3F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283277E1C13F5F300BAA3F1 /* MainViewController.swift */; };
+		828F41991C13FF24000FD7E7 /* customField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F41981C13FF24000FD7E7 /* customField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		8271F3411C12C8F700558BC6 /* BumperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8271F3451C12C8F700558BC6 /* BumperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumperUITests.swift; sourceTree = "<group>"; };
 		8271F3471C12C8F700558BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827AA9E61C1402CB00E2C0FB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8283277E1C13F5F300BAA3F1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		828F41981C13FF24000FD7E7 /* customField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,12 @@
 		8271F3241C12C8F700558BC6 /* Bumper */ = {
 			isa = PBXGroup;
 			children = (
+				828F41971C13FEE8000FD7E7 /* CustomViews */,
+				8283277E1C13F5F300BAA3F1 /* MainViewController.swift */,
 				8271F3251C12C8F700558BC6 /* AppDelegate.swift */,
 				8271F3271C12C8F700558BC6 /* ViewController.swift */,
 				8271F3291C12C8F700558BC6 /* Main.storyboard */,
+				827AA9E61C1402CB00E2C0FB /* LoginViewController.swift */,
 				8271F32C1C12C8F700558BC6 /* Assets.xcassets */,
 				8271F32E1C12C8F700558BC6 /* LaunchScreen.storyboard */,
 				8271F3311C12C8F700558BC6 /* Info.plist */,
@@ -123,6 +132,14 @@
 				8271F3471C12C8F700558BC6 /* Info.plist */,
 			);
 			path = BumperUITests;
+			sourceTree = "<group>";
+		};
+		828F41971C13FEE8000FD7E7 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				828F41981C13FF24000FD7E7 /* customField.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +210,7 @@
 				TargetAttributes = {
 					8271F3211C12C8F700558BC6 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 42AP293MFC;
 					};
 					8271F3351C12C8F700558BC6 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -256,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8283277F1C13F5F300BAA3F1 /* MainViewController.swift in Sources */,
 				8271F3281C12C8F700558BC6 /* ViewController.swift in Sources */,
 				8271F3261C12C8F700558BC6 /* AppDelegate.swift in Sources */,
+				827AA9E71C1402CB00E2C0FB /* LoginViewController.swift in Sources */,
+				828F41991C13FF24000FD7E7 /* customField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +418,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Bumper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.connorhendicott.Bumper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -408,10 +431,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Bumper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.connorhendicott.Bumper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -482,6 +507,7 @@
 				8271F34C1C12C8F700558BC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8271F34D1C12C8F700558BC6 /* Build configuration list for PBXNativeTarget "BumperTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +516,7 @@
 				8271F34F1C12C8F700558BC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8271F3501C12C8F700558BC6 /* Build configuration list for PBXNativeTarget "BumperUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +525,7 @@
 				8271F3521C12C8F700558BC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
